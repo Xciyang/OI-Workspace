@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "g++",
+            "args": [
+                "\"${file}\"",
+                "-o",
+                "\"${fileDirname}\\${fileBasenameNoExtension}\".exe",
+                "-O2"
+            ],
+            "type": "shell",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build-bug",
+            "command": "g++",
+            "args": [
+                "-g",
+                "\"${file}\"",
+                "-o",
+                "\"${fileDirname}\\${fileBasenameNoExtension}\".exe"
+            ],
+            "type": "shell",
+            "problemMatcher": [],
+        },
+        {
+            "label": "build-bug-Wall",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "\"${file}\"",
+                "-o",
+                "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+            ],
+            "type": "shell",
+            "problemMatcher": [],
+        },
+        {
+            "label": "build-bug-Project",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "\"${file}\"",
+                "-o",
+                "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "buildCS",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "\"${fileDirname}\\Myapp.csproj\""
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        }
+    ]
+}
