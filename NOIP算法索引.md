@@ -1,6 +1,6 @@
 ### 通用
 
-找规律，推结论，面向部分数据，预处理，强制转换浮点数，大小判断等于号，初始化注意大小和范围，离散化
+找规律，推结论，面向部分数据，预处理，强制转换浮点数，大小判断等于号，初始化注意大小和范围，离散化，离线操作倒序
 
 ### 二分答案
 
@@ -76,20 +76,26 @@ LuoguP1034 | 矩形覆盖 | https://www.luogu.org/problem/P1034
 
 ### LCA
 
-倍增LCA，推关系，树上最短路，作为中转点
+倍增LCA，推关系，树上最短路，中转点
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP3398 | 仓鼠找sugar | https://www.luogu.org/problem/P3398
+LuoguP1600 | 天天爱跑步 | https://www.luogu.org/problem/P1600
 
 ### 树链剖分
 
-板子打好，树上问题，路径相关，子树相关
+板子认真写，树上问题，树上路径，子树、树链，边权转点权，无向图剖分，线段树
+
+复杂度：时间nlog^2n
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP3979 | 遥远的国度 | https://www.luogu.org/problem/P3979
 LuoguP4092 | 树 | https://www.luogu.org/problem/P4092
+LuoguP4374 | Disruption | https://www.luogu.org/problem/P4374
+LuoguP2542 | 航线规划 | https://www.luogu.org/problem/P2542
+LuoguP4116 | Qtree3 | https://www.luogu.org/problem/P4116
 
 ### 区间DP
 
@@ -115,3 +121,4 @@ LuoguP4092 | 树 | https://www.luogu.org/problem/P4092
 LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
 LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
 一本通1767 | 字符合并 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1767
+LuoguP1600 | 天天爱跑步 | https://www.luogu.org/problem/P1600
