@@ -17,6 +17,12 @@ LuoguP5021 | 赛道修建 | https://www.luogu.org/problem/P5021
 LuoguP4403 | 秦腾与教学评估 | https://www.luogu.org/problem/P4403
 一本通1677 | 软件开发 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1677
 
+### 贪心
+
+编号 | 题目 | 链接
+--|--|--
+LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
+
 ### 深搜
 
 折半剪枝，预处理，巧用位运算，分治思想，分析复杂度，估价（启发式）剪枝，基环树找环
@@ -97,6 +103,21 @@ LuoguP4374 | Disruption | https://www.luogu.org/problem/P4374
 LuoguP2542 | 航线规划 | https://www.luogu.org/problem/P2542
 LuoguP4116 | Qtree3 | https://www.luogu.org/problem/P4116
 
+### 最短路
+
+判断点之间关系
+编号 | 题目 | 链接
+--|--|--
+P2419 | 牛大赛Cow Contest | https://www.luogu.org/problem/P2419
+
+### 最小生成树
+
+prim，kruskal，求图上任意点到某点的最小距离
+
+编号 | 题目 | 链接
+--|--|--
+LuoguP4047 | 部落划分 | https://www.luogu.org/problem/P4047
+
 ### 区间DP
 
 记忆化搜索实现，编号区间化，值域区间化，清楚子区间转移
@@ -122,3 +143,4 @@ LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
 LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
 一本通1767 | 字符合并 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1767
 LuoguP1600 | 天天爱跑步 | https://www.luogu.org/problem/P1600
+LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315

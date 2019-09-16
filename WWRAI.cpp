@@ -42,7 +42,7 @@ void CiyangAI() {
 	}
 	static int arBullet[MAP_SIZE_X][MAP_SIZE_Y], wp[MAP_SIZE_X][MAP_SIZE_Y], moves[][2]= {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 	static char movesc[][3]= {"AW", "AA", "AS", "WW", "SS", "DW", "DD", "DS"};
-	auto RandNextPos= [mx, my](int cnt) -> void {
+	auto RandNextPos= [mx, my, this](int cnt) -> void {
 		while(cnt--) {
 			if(inMap(ais.lastex, ais.lastey) && !isWall(ais.lastex, ais.lastey) && !arBullet[ais.lastex][ais.lastey] && (ais.lastex != mx || ais.lastey != my)) break;
 			ais.lastex+= random.rand() % 9 - 4, ais.lastey+= random.rand() % 9 - 4;
@@ -50,7 +50,7 @@ void CiyangAI() {
 		}
 		return;
 	};
-	auto BFSNextPos= [mx, my, &nx, &ny](std::queue< CYNODE > &qu, int bul) -> int {
+	auto BFSNextPos= [mx, my, &nx, &ny, this](std::queue< CYNODE > &qu, int bul) -> int {
 		while(!qu.empty()) {
 			nowno= qu.front(), qu.pop();
 			if(nowno.x == mx && nowno.y == my) return 7 - nowno.lastt;
@@ -63,7 +63,7 @@ void CiyangAI() {
 		}
 		return 8;
 	};
-	auto NormalNextPos= [mx, my, &nx, &ny](std::vector< int > &canu, std::vector< int > &canuu) -> void {
+	auto NormalNextPos= [mx, my, &nx, &ny, this](std::vector< int > &canu, std::vector< int > &canuu) -> void {
 		for(int i= 0; i < 8; i++) {
 			nx= mx + moves[i][0], ny= my + moves[i][1];
 			if(!inMap(nx, ny) || isWall(nx, my) || isWall(mx, ny) || isWall(nx, ny)) continue;
@@ -122,24 +122,42 @@ void CiyangAI() {
 			if(!canu.empty()) {
 				int num= random.rand() % canu.size();
 				for(int j= 0; j < 2; j++) btnstate[movesc[canu[num]][j]]= 1;
+				flak= 1;
 			}
 		}
 	}
 	else if(scPlayer.size() == 1) {
-		std::vector< int > canu, canuu;
-		NormalNextPos(canu, canuu);
-		if(canu.empty()) canu= canuu;
-		if(!canu.empty()) {
-			int num= random.rand() % canu.size();
-			for(int j= 0; j < 2; j++) btnstate[movesc[canu[num]][j]]= 1;
+		ais.lastex= mx, ais.lastey= my;
+		RandNextPos(20);
+		if(inMap(ais.lastex, ais.lastey) && !isWall(ais.lastex, ais.lastey) && !arBullet[ais.lastex][ais.lastey] && (ais.lastex != mx || ais.lastey != my)) {
+			std::queue< CYNODE > qu;
+			qu.push(CYNODE{ais.lastex, ais.lastey, 0});
+			memset(wp, 0, sizeof(wp)), wp[ais.lastex][ais.lastey]= 1;
+			int res= BFSNextPos(qu, 1);
+			if(res < 8) {
+				for(int j= 0; j < 2; j++) btnstate[movesc[res][j]]= 1;
+				flak= 1;
+			}
+		}
+		if(!flak) {
+			std::vector< int > canu, canuu;
+			NormalNextPos(canu, canuu);
+			if(canu.empty()) canu= canuu;
+			if(!canu.empty()) {
+				int num= random.rand() % canu.size();
+				for(int j= 0; j < 2; j++) btnstate[movesc[canu[num]][j]]= 1;
+				flak= 1;
+			}
 		}
 		if(mindis > GetPlayerWeapon(state.my).reload_time / 5 && random.rand() % 2) btnstate['R']= 1;
 		mouse_pos= state.p[clPlayer].pos - state.p[state.my].pos + veci(SIGHT_SIZE_X / 2, SIGHT_SIZE_Y / 2), lbtn= 1;
 		for(vecd bp= state.p[state.my].pos, bv= getv(state.p[state.my].pos, state.p[state.my].pos + (mouse_pos - veci(SIGHT_SIZE_X / 2, SIGHT_SIZE_Y / 2))); (bp - state.p[state.my].pos).len() < mindis && inMap(roundx(bp.x), roundx(bp.y));
 			bp= bp + bv) {
 			if(isWall(roundx(bp.x), roundx(bp.y)) && !lastab) {
-				lbtn= 0;
-				break;
+				if(rand() % 2) {
+					lbtn= 0;
+					break;
+				}
 			}
 		}
 	}
@@ -149,9 +167,9 @@ void CiyangAI() {
 		if(!canu.empty()) {
 			int num= random.rand() % canu.size();
 			for(int j= 0; j < 2; j++) btnstate[movesc[canu[num]][j]]= 1;
-			falk= 1;
+			flak= 1;
 		}
-		if(!falk) {
+		if(!flak) {
 			RandNextPos(20);
 			if(inMap(ais.lastex, ais.lastey) && !isWall(ais.lastex, ais.lastey) && !arBullet[ais.lastex][ais.lastey] && (ais.lastex != mx || ais.lastey != my)) {
 				std::queue< CYNODE > qu;
@@ -160,16 +178,17 @@ void CiyangAI() {
 				int res= BFSNextPos(qu, 0);
 				if(res < 8) {
 					for(int j= 0; j < 2; j++) btnstate[movesc[res][j]]= 1;
-					falk= 1;
+					flak= 1;
 				}
 			}
 		}
-		if(!falk) {
+		if(!flak) {
 			if(canu.empty()) canu= canuu;
 			if(!canu.empty()) {
 				int num= random.rand() % canu.size();
 				for(int j= 0; j < 2; j++) btnstate[movesc[canu[num]][j]]= 1;
 			}
+			flak= 1;
 		}
 		mouse_pos= state.p[clPlayer].pos - state.p[state.my].pos + veci(SIGHT_SIZE_X / 2, SIGHT_SIZE_Y / 2), lbtn= 1;
 	}
