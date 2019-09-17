@@ -1,6 +1,6 @@
 ### 通用
 
-找规律，推结论，面向部分数据，预处理，强制转换浮点数，大小判断等于号，初始化注意大小和范围，离散化，离线操作倒序
+找规律，推结论，面向部分数据，预处理，强制转换浮点数，大小判断等于号，初始化注意大小和范围，离散化，离线操作倒序，高精度转模数（慎用）
 
 ### 二分答案
 
@@ -16,12 +16,20 @@ LuoguP3743 | kotori的设备 | https://www.luogu.org/problem/P3743
 LuoguP5021 | 赛道修建 | https://www.luogu.org/problem/P5021
 LuoguP4403 | 秦腾与教学评估 | https://www.luogu.org/problem/P4403
 一本通1677 | 软件开发 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1677
+LuoguP3132 | Angry Cows | https://www.luogu.org/problem/P3132
 
 ### 贪心
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
+
+### 模拟
+
+编号 | 题目 | 链接
+--|--|--
+LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
+LuoguP1944 | 最长括号匹配 | https://www.luogu.org/problem/P1944
 
 ### 深搜
 
@@ -134,6 +142,13 @@ LuoguP4047 | 部落划分 | https://www.luogu.org/problem/P4047
 编号 | 题目 | 链接
 --|--|--
 一本通1684 | 翻转序列 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1684
+
+### 强连通分量
+
+编号 | 题目 | 链接
+--|--|--
+P1407 | 稳定婚姻 | https://www.luogu.org/problem/P1407
+
 
 ### 值得研究
 
