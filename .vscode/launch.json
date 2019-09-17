@@ -5,17 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "buildCS",
-            "program": "${fileDirname}/bin/Debug/netcoreapp2.2/Myapp.dll",
-            "args": [],
-            "cwd": "${fileDirname}",
-            "stopAtEntry": false,
-            "console": "internalConsole",
-        },
-        {
             "name": "C++ Luauch (GDB)",
             "type": "cppdbg",
             "request": "launch",
