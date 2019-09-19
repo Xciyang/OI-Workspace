@@ -1,6 +1,14 @@
 ### 通用
 
-找规律，推结论，面向部分数据，预处理，强制转换浮点数，大小判断等于号，初始化注意大小和范围，离散化，离线操作倒序，高精度转模数（慎用）
+看清题意
+找规律 推结论
+面向部分数据
+预处理 离散化
+强制转换
+大小判断等于号
+初始化注意大小和范围
+离线处理 操作倒序
+高精度转模数（慎用）
 
 ### 二分答案
 
@@ -71,7 +79,7 @@ LuoguP1776 | 宝物筛选 | https://www.luogu.org/problem/P1776
 
 ### 倍增
 
-空间效率折中算法，找k级祖先，存储可加DP
+空间效率折中算法，找k级祖先，存储可加DP，优先枚举层数
 
 复杂度：时间log，空间log
 编号 | 题目 | 链接
@@ -79,6 +87,8 @@ LuoguP1776 | 宝物筛选 | https://www.luogu.org/problem/P1776
 LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
 LuoguP3979 | 遥远的国度 | https://www.luogu.org/problem/P3979
 LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
+LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
+
 
 ### 计算几何
 
@@ -120,20 +130,32 @@ P2419 | 牛大赛Cow Contest | https://www.luogu.org/problem/P2419
 
 ### 最小生成树
 
-prim，kruskal，求图上任意点到某点的最小距离
+prim，kruskal，求图上任意点到某点的最小距离，扩展完全图
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP4047 | 部落划分 | https://www.luogu.org/problem/P4047
+一本通1710 | 构造完全图 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1710
 
 ### 区间DP
 
-记忆化搜索实现，编号区间化，值域区间化，清楚子区间转移
+记忆化搜索实现，编号区间化，值域区间化，清楚子区间转移，两方区间博弈问题
 
 编号 | 题目 | 链接
 --|--|--
 一本通1766 | 成绩单 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1766
 一本通1767 | 字符合并 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1767
+LuoguP3004 | 宝箱 | https://www.luogu.org/problem/P3004
+
+### 树形DP
+
+树上计数类问题
+
+复杂度：小
+
+编号 | 题目 | 链接
+--|--|--
+LuoguP2796 | Facer的程序 | https://www.luogu.org/problem/P2796
 
 ### 启发式迭代加深
 

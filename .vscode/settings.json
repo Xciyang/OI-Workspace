@@ -53,7 +53,9 @@
         "list": "cpp",
         "regex": "cpp",
         "algorithm": "cpp",
-        "memory_resource": "cpp"
+        "memory_resource": "cpp",
+        "forward_list": "cpp",
+        "valarray": "cpp"
     },
     "editor.fontSize": 25,
     "C_Cpp.default.intelliSenseMode": "gcc-x64"

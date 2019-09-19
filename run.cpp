@@ -5,21 +5,29 @@
 using namespace std;
 int c;
 int n;
-#define CAK "CAK10"
+#define FNAME "5557"
+#define RND "rand"
+#define YOU "P5557"
+#define STD "5557std"
+#define OPENSTD 1
 int main() {
 	while(true) {
 		printf("-begin-\n");
-		system(".\\0903.exe > ./CAK/" CAK ".in");
+		system(".\\" RND " > ./" FNAME ".in");
 		c= clock();
-		system(".\\JSB.exe < ./CAK/" CAK ".in > ./CAK/now.out");
+		system(".\\" YOU " < ./" FNAME ".in > ./now.out");
 		c= clock() - c;
-		printf("BAOLI TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
-
+		printf("YOU TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
+#if OPENSTD == 1
 		c= clock();
-		system(".\\JSB2.exe < ./CAK/" CAK ".in > ./CAK/" CAK ".out");
+		system(".\\" STD " < ./" FNAME ".in > ./" FNAME ".out");
 		c= clock() - c;
-		printf("YOUHUA TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
-		system("fc .\\CAK\\" CAK ".out .\\CAK\\now.out");
+		printf("STD TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
+		if(system("fc .\\" FNAME ".out .\\now.out")) {
+			printf("任意键继续。");
+			while(getchar()) break;
+		}
+#endif
 		printf("-end-\n");
 	}
 	return 0;

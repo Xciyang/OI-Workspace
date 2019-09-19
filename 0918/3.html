@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+  <meta content="IE=7" http-equiv="X-UA-Compatible" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+﻿<title>信息学奥赛一本通（C++版）在线评测系统</title>
+<link rel=stylesheet href='bnuoj.css'>
+<link type="text/css" rel="stylesheet" href="sh_style.css">
+<script type="text/javascript" src="js/sh_main.js"></script>
+<script type="text/javascript" src="utf8-php/ueditor.config.js"></script>
+<script type="text/javascript" src="utf8-php/ueditor.all.min.js"></script>
+<script type="text/javascript" src="utf8-php/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="mk/showdown.min.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showProcessingMessages: false,tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes:true},menuSettings: {zoom: "Hover"}});
+</script>
+<script type="text/javascript"
+  src="mk/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head> 
+<body topmargin='0' onload="sh_highlightDocument();">
+<center>
+<table class="webtop" width="98%">
+<tr>
+<th width='60%'><img src="5.jpg"  width=70% height=70% border=0 name="banner"></a><br><font size=2 color=#FFA07A>本网站由成都石室中学、福建长乐一中信奥教练联合呈现。题库教师群:307432527,仅供教师加入</font></th>
+<th width="30%">
+<form action='login.php' method=post><table width=100%><tr><td style='width:35%' align='right'>用户：</td><td><input type='text' name='username' style='height:25px;'></td><td></td></tr><tr><td style='width:20%' align='right'>&nbsp;&nbsp;密码：</td><td><input type='password' name='password' style='height:25px;width:100％'></td><td></td></tr></table><table width=100%><tr><th><input name='login' type='submit' size=15 value='登录'>&nbsp;&nbsp;<a href='register.php'>注册新用户</a></th><tr></table></form></th></tr></table>
+<table class="menu" width="98%">
+<tr>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='http://ybt.ssoier.cn:8088' class='menu'>首页 </a></th>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='ranklist.php' class='menu'>排名 </a></th>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='status.php' class='menu'>提交记录 </a></th>
+<? if ($ppage==""||$ppage==0) $ppage=1; ?>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='problem_list.php?page=' class='menu'>题目列表 </a></th>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='contest_list.php' class='menu'>比赛 </a></th>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='tch_index.php' class='menu'>教师频道</a> </th>
+<th width="14%" class='menu' bgcolor='#c8d4f7'><a href='about.php' class='menu'>关于 </th>
+</tr>
+</table>
+</center><MARQUEE DIRECTION=LEFT SCROLLAMOUNT=3  SCROLLDELAY=100 class="substitle"><font size=2><strong>为网站的持续发展，本网站开通了捐赠支付宝帐号，详情请点击“<a href='about.php'>关于</a>“选项。 教师频道的功能开通了！！！</strong></font></MARQUEE>
+<hr>
+<style type="text/css">
+pre {
+  //margin:10px auto;
+  //padding:10px;
+  background-color:#e0e0e0;/*根据自己需要修改背景底色颜色*/
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  letter-spacing:0;
+  font:14px/20px 'courier new';
+  position:relative;
+  border-radius:3px;
+}
+</style>
+<center><table width=900><td class='pcontent'><center><h3>寿司晚宴</h3><br><font size='2'>时间限制: 2000 ms &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 内存限制: 524288 KB<br>提交数: 17 &nbsp;&nbsp;&nbsp; 通过数: 13 </font><br></center><font size='2'><h3>【题目描述】</h3>
+<p>为了庆祝 NOI 的成功开幕，主办方为大家准备了一场寿司晚宴。小 G 和小 W 作为参加 NOI 的选手，也被邀请参加了寿司晚宴。</p><p>
+在晚宴上,主办方为大家提供了 $n−1$ 种不同的寿司，编号 $1,2,3,…,n−1$，其中第$i$种寿司的美味度为 $i+1$ （即寿司的美味度为从 $2$ 到 $n$）。</p><p>
+现在小 G 和小 W 希望每人选一些寿司种类来品尝，他们规定一种品尝方案为不和谐的当且仅当：小 G 品尝的寿司种类中存在一种美味度为 $x$ 的寿司，小 W 品尝的寿司中存在一种美味度为 $y$ 的寿司，而 $x$ 与 $y$ 不互质。</p><p>
+现在小 G 和小 W 希望统计一共有多少种和谐的品尝寿司的方案（对给定的正整数 $p$ 取模）。注意一个人可以不吃任何寿司。</p>
+
+<h3>【输入】</h3>
+<p>输入文件的第 $1$ 行包含 $2$ 个正整数$n,p$，中间用单个空格隔开，表示共有 $n$ 种寿司，最终和谐的方案数要对 $p$ 取模。</p>
+<h3>【输出】</h3>
+<p>输出一行包含 $1$ 个整数，表示所求的方案模 $p$ 的结果。</p>
+<h3>【输入样例】</h3>
+<font size=3><div style='padding-left:24px;'><pre>4 10000
+</pre></div>
+<font size=2><h3>【输出样例】</h3>
+<font size=3><div style='padding-left:24px;'><pre>21</pre></div><font size=2><h3>【提示】</h3><p>【样例输入2】</p><p></p>
+<font size=3><div style='padding-left:24px;'><pre>100 100000000</pre></div><font size=2><p></p><p>
+【样例输出2】	</p><p></p>
+<font size=3><div style='padding-left:24px;'><pre>3107203</pre></div><font size=2><p></p><p>
+【数据规模与约定】</p><p>
+子任务会给出部分测试数据的特点。如果你在解决题目的过程中遇到了困难，可以尝试只解决一部分测试数据。</p><p>
+每个测试点的数据规模及特点如下表：</p><p>
+<table border="1" bordercolor="#a0c6e5" style="border-collapse:collapse;"><tr><td>测试点编号</td><td>$n$的规模</td><td>约定</td></tr><tr><td>$1$</td><td rowspan=3>$2≤n≤30$</td><td rowspan=10>$0≤p≤10^9$</td></tr><tr><td>$2$</td></tr><tr><td>$3$</td></tr><tr><td>$4$</td><td rowspan=2>$2≤n≤100$</td></tr><tr><td>$5$</td></tr><tr><td>$6$</td><td rowspan=2>$2≤n≤200$</td></tr><tr><td>$7$</td></tr><tr><td>$8$</td><td rowspan=3>$2≤n≤500$</td></tr><tr><td>$9$</td></tr><tr><td>$10$</td></tr></table></p>
+<h3>【来源】</h3><br><font size='2'><a href='problem_search.php?searchsource=No' class='bottom_link'>No</a><p align=center> <a href=submit.php?pid=1802 class='bottom_link'> 提交 </a> <a href=problem_stat.php?pid=1802 class='bottom_link'> 统计信息 </a> </p></td></tr></table></center><hr>
+<center>
+<p><FONT size=2>
+本题库与《信息学奥赛一本通（C++版）》（科学技术文献出版社）配套，版权及相关事宜请与本书作者联系，本网站不作解答。<br>
+本网站属公益、非盈利性质，不涉及与书相关的商业活动，后期可能适当收取费用以支持网站的运行维护。<br>
+目前因个人编写水平有限，网站维护、网站安全方面及部分功能的开发尚不成熟，如遇疑问，请通过版主信箱联系。<br>
+感谢成都石室中学Wuvin、Qizy、Xehoth三位同学对本网站的支持，特别鸣谢北京师范大学ACM前校队易超、唐巧、洪涛同学。<br>
+版主信箱：ybt_mail@126.com<br>
+</font></p>
+</center>
+</body>
+</html>
