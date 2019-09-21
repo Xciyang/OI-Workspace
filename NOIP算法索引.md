@@ -76,6 +76,7 @@ LuoguP4677 | 山区建小学 | https://www.luogu.org/problem/P4677
 LuoguP1412 | 经营与开发 | https://www.luogu.org/problem/P1412
 LuoguP1850 | 换教室 | https://www.luogu.org/problem/P1850
 LuoguP1776 | 宝物筛选 | https://www.luogu.org/problem/P1776
+LuoguP1282 | 多米诺骨牌 | https://www.luogu.org/problem/P1282
 
 ### 倍增
 

@@ -55,7 +55,9 @@
         "algorithm": "cpp",
         "memory_resource": "cpp",
         "forward_list": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "unordered_set": "cpp",
+        "shared_mutex": "cpp"
     },
     "editor.fontSize": 25,
     "C_Cpp.default.intelliSenseMode": "gcc-x64"
