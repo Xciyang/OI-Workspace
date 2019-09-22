@@ -63,7 +63,7 @@ LuoguP5049 | 旅行（数据加强版） | https://www.luogu.org/problem/P5049
 
 ### 动态规划
 
-先考虑最朴素的式子，最后总结答案，判断可行性问题，两条件互影响（枚举一个，存储另一个），简单DP，二维前缀和，只有后效性（无前效性），倒推思想，考虑全面，多重背包（二进制优化）
+先考虑最朴素的式子，最后总结答案，判断可行性问题，两条件互影响（枚举一个，存储另一个），简单DP，二维前缀和，只有后效性（无前效性），倒推思想，考虑全面，多重背包（二进制优化），排序后背包
 
 复杂度：时间中（维度相乘），空间中（维度相乘）
 
@@ -77,6 +77,7 @@ LuoguP1412 | 经营与开发 | https://www.luogu.org/problem/P1412
 LuoguP1850 | 换教室 | https://www.luogu.org/problem/P1850
 LuoguP1776 | 宝物筛选 | https://www.luogu.org/problem/P1776
 LuoguP1282 | 多米诺骨牌 | https://www.luogu.org/problem/P1282
+LuoguP4138 | 挂饰 | https://www.luogu.org/problem/P4138
 
 ### 倍增
 
@@ -89,7 +90,6 @@ LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
 LuoguP3979 | 遥远的国度 | https://www.luogu.org/problem/P3979
 LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
 LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
-
 
 ### 计算几何
 
@@ -125,9 +125,18 @@ LuoguP4116 | Qtree3 | https://www.luogu.org/problem/P4116
 ### 最短路
 
 判断点之间关系
+
 编号 | 题目 | 链接
 --|--|--
 P2419 | 牛大赛Cow Contest | https://www.luogu.org/problem/P2419
+
+### 拓扑排序
+
+反拓扑排序
+
+编号 | 题目 | 链接
+--|--|--
+P3243 | 菜肴制作 | https://www.luogu.org/problem/P3243
 
 ### 最小生成树
 
@@ -171,7 +180,6 @@ LuoguP2796 | Facer的程序 | https://www.luogu.org/problem/P2796
 编号 | 题目 | 链接
 --|--|--
 P1407 | 稳定婚姻 | https://www.luogu.org/problem/P1407
-
 
 ### 值得研究
 

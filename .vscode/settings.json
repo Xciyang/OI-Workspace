@@ -57,8 +57,25 @@
         "forward_list": "cpp",
         "valarray": "cpp",
         "unordered_set": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "complex": "cpp"
     },
     "editor.fontSize": 25,
-    "C_Cpp.default.intelliSenseMode": "gcc-x64"
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "rainbowString": {
+        "extensions": [
+            ".json",
+            ".cs",
+            ".csx",
+            ".fs",
+            ".fsx",
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx",
+            ".csproj",
+            ".fsproj",
+            ".ejs"
+        ]
+    }
 }
