@@ -99,6 +99,14 @@ LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
 --|--|--
 LuoguP1034 | 矩形覆盖 | https://www.luogu.org/problem/P1034
 
+### 树的直径
+
+树的直径的中点
+
+编号 | 题目 | 链接
+--|--|--
+P5536 | 核心城市 | https://www.luogu.org/problem/P5536
+
 ### LCA
 
 倍增LCA，推关系，树上最短路，中转点
