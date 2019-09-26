@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-int a, m, b, phim, flag;
+int a, m, b, m, flag;
 int eular(int x) {
 	int ans= x;
 	for(int i= 2; i * i <= x; ++i) {
@@ -23,18 +23,18 @@ int qpow(int x, int e, int p) {
 	return ans;
 }
 int main() {
-	cin >> a >> m, phim= eular(m);
+	cin >> a >> m, m= eular(m);
 	char ch= getchar();
 	while(ch < '0' || ch > '9') ch= getchar();
 	while(ch >= '0' && ch <= '9') {
 		b= b * 10 + ch - '0';
-		if(b >= phim) {
+		if(b >= m) {
 			flag= 1;
-			b%= phim;
+			b%= m;
 		}
         ch= getchar();
 	}
-	if(flag) b+= phim;
+	if(flag) b+= m;
 	cout << qpow(a, b, m) << endl;
 	return 0;
 }
