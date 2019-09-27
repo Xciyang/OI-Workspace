@@ -1,7 +1,6 @@
 ### 通用
 
 看清题意
-找规律 推结论
 面向部分数据
 预处理 离散化
 强制转换
@@ -28,9 +27,14 @@ LuoguP3132 | Angry Cows | https://www.luogu.org/problem/P3132
 
 ### 贪心
 
+推结论，找规律，排序
+
+复杂度：时间小，空间小
+
 编号 | 题目 | 链接
 --|--|--
 LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
+LuoguP2821 | 变幻数 | https://www.luogu.org/problem/P2821
 
 ### 模拟
 
@@ -136,7 +140,7 @@ LuoguP4116 | Qtree3 | https://www.luogu.org/problem/P4116
 
 编号 | 题目 | 链接
 --|--|--
-P2419 | 牛大赛Cow Contest | https://www.luogu.org/problem/P2419
+P2419 | 牛大赛 | https://www.luogu.org/problem/P2419
 
 ### 拓扑排序
 
@@ -198,3 +202,4 @@ LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
 一本通1767 | 字符合并 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1767
 LuoguP1600 | 天天爱跑步 | https://www.luogu.org/problem/P1600
 LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
+
