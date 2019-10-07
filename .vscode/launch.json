@@ -4,6 +4,7 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "C++ Luauch (GDB)",
             "type": "cppdbg",
@@ -38,6 +39,48 @@
             "preLaunchTask": "build-bug-Wall",
             "MIMode": "gdb",
             "miDebuggerPath": "D:/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "C++ Luauch (GDB) ComRoom",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "build-bug",
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/Ciyang/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "C++ Luauch -Wall(GDB) ComRoom",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "build-bug-Wall",
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/Ciyang/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

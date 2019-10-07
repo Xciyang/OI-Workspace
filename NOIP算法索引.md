@@ -35,6 +35,7 @@ LuoguP3132 | Angry Cows | https://www.luogu.org/problem/P3132
 --|--|--
 LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
 LuoguP2821 | 变幻数 | https://www.luogu.org/problem/P2821
+LuoguP4053 | 建筑抢修 | https://www.luogu.org/problem/P4053
 
 ### 模拟
 
@@ -136,11 +137,13 @@ LuoguP4116 | Qtree3 | https://www.luogu.org/problem/P4116
 
 ### 最短路
 
-判断点之间关系
+判断点之间关系，最短路删边，超级源点
 
 编号 | 题目 | 链接
 --|--|--
-P2419 | 牛大赛 | https://www.luogu.org/problem/P2419
+LuoguP2419 | 牛大赛 | https://www.luogu.org/problem/P2419
+CF449B | Jzzhu and Cities | https://www.luogu.org/problem/CF449B
+CF938D | Buy a Ticket | https://www.luogu.org/problem/CF938D
 
 ### 拓扑排序
 
