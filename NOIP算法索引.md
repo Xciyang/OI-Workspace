@@ -36,6 +36,7 @@ LuoguP3132 | Angry Cows | https://www.luogu.org/problem/P3132
 LuoguP1315 | 观光公交 | https://www.luogu.org/problem/P1315
 LuoguP2821 | 变幻数 | https://www.luogu.org/problem/P2821
 LuoguP4053 | 建筑抢修 | https://www.luogu.org/problem/P4053
+LuoguP1645 | 序列 | https://www.luogu.org/problem/P1645
 
 ### 模拟
 
