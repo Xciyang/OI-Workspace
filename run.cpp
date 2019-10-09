@@ -6,9 +6,9 @@ using namespace std;
 int c;
 int n;
 #define FNAME "5557"
-#define RND "rand"
-#define YOU "P5557"
-#define STD "5557std"
+#define RND "2470make"
+#define YOU "P2470"
+#define STD "2470std"
 #define OPENSTD 1
 int main() {
 	while(true) {
