@@ -22,7 +22,9 @@
                     "${workspaceFolder}"
                 ],
                 "limitSymbolsToIncludedHeaders": true
-            }
+            },
+            "compilerPath": "D:/Ciyang/mingw64/bin/g++.exe",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4

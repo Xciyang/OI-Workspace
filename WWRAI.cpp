@@ -28,9 +28,73 @@
 
 //---begin---
 void Game::CiyangAI() {
-	// return;
+#define STATUS_WAIT 0x0000
+#define STATUS_ATTACK 0x0001
+#define STATUS_AWAY 0x0002
+#define STATUS_FIND 0x0004
+
 	static Random random(time(0));
-	static struct AIState { int lastex, lastey; } ais= {state.p[state.my].pos.x, state.p[state.my].pos.y};
+	struct AI_STATE {
+		int status;
+		int gox, goy, attp;
+		AI_STATE() {}
+	};
+	struct C_NODE {
+		int x, y;
+	};
+	static AI_STATE aiState;
+	int opt= 0, closePlayer= -1;
+	vector< int > sceenPlayers;
+	double closestDis= 1e19;
+	auto checkAllPlayer= [&closePlayer, &closestDis, &sceenPlayers, this]() -> void {
+		if(closePlayer != -1) return;
+		for(int i= 0; i < state.cnt; i++) {
+			if(i == state.my || state.p[i].remove) continue;
+			if(abs(state.p[i].pos.x - mx) <= SIGHT_SIZE_X * 1.5 && abs(state.p[i].pos.y - my) <= SIGHT_SIZE_Y * 1.5) sceenPlayers.push_back(i);
+			if(closestDis > (state.p[i].pos - state.p[state.my].pos).len()) closestDis= (state.p[i].pos - state.p[state.my].pos).len(), closePlayer= i;
+		}
+		return;
+	};
+	static int nbtnstate[4], availableStep[8], moves[][2]= {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+	static char controlMove[]= "WASD", moveNeed[][5]= {"1100", "0100", "0110", "1000", "0010", "1001", "0001", "0011"};
+	int hadgeta= 0;
+	auto getAvailableStep= [&hadgeta, this]() -> void {
+		if(hadgeta) return;
+		hadgeta= 1;
+		for(int i= 0; i < 8; i++) availableStep[i]= -1;
+		for(int i= 0; i < 4; i++) {
+			for(int j= 0; j < 4; j++) nbtnstate[j]= btnstate[controlMove[j]];
+			nbtnstate[i]^= 1;
+			if(nbtnstate[0] && nbtnstate[2]) nbtnstate[0]= nbtnstate[2]= 0;
+			if(nbtnstate[1] && nbtnstate[3]) nbtnstate[1]= nbtnstate[3]= 0;
+			for(int j= 0, k; j < 8; j++) {
+				if(availableStep[j] != -1) continue;
+				for(k= 0; k < 4; k++)
+					if(nbtnstate[k] != moveNeed[j][k]) break;
+				if(k == 4) availableStep[j]= i;
+			}
+		}
+		return;
+	};
+	if(aiState.status & STATUS_WAIT) {
+		checkAllPlayer();
+		if(sceenPlayers.size() == 0)
+			aiState.status|= (STATUS_FIND);
+		else if(sceenPlayers.size() == 1)
+			aiState.status^= (STATUS_WAIT | STATUS_ATTACK);
+		else
+			aiState.status^= (STATUS_WAIT | STATUS_ATTACK | STATUS_AWAY);
+	}
+	if(aiState.status & STATUS_ATTACK) {
+		checkAllPlayer();
+		if(abs(state.p[i].pos.x - mx) > SIGHT_SIZE_X * 1.5 && abs(state.p[i].pos.y - my) > SIGHT_SIZE_Y * 1.5) aiState.status^= STATUS_ATTACK;
+		if(state.p[state.my].flag_process == PT_RELOAD) btnstate['R']= 0;
+		if(state.p[state.my].flag_process != PT_RELOAD && (state.p[state.my].rest_bullet == 0 || (mindis + 1 > GetPlayerWeapon(state.my).reload_time / 5 && state.p[state.my].rest_bullet < 5))) btnstate['R']= 1;
+	}
+	return;
+}
+
+/*
 	static struct CYNODE { int x, y, lastt; } nowno;
 	int mx= state.p[state.my].pos.x, my= state.p[state.my].pos.y, nx, ny, lastab, flak= 0, clPlayer;
 	double mindis= 1e9;
@@ -129,4 +193,4 @@ void Game::CiyangAI() {
 		if(!flak || random.rand() % 10 == 0) BFSRandPos();
 	}
 	return;
-}
+*/
