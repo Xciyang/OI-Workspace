@@ -69,7 +69,7 @@ LuoguP5049 | 旅行（数据加强版） | https://www.luogu.org/problem/P5049
 
 ### 动态规划
 
-先考虑最朴素的式子，最后总结答案，判断可行性问题，两条件互影响（枚举一个，存储另一个），简单DP，二维前缀和，只有后效性（无前效性），倒推思想，考虑全面，多重背包（二进制优化），排序后背包
+先考虑最朴素的式子，最后总结答案，判断可行性问题，两条件互影响（枚举一个，存储另一个），简单DP，二维前缀和，只有后效性（无前效性），倒推思想，考虑全面，多重背包（二进制优化），排序后背包，最长上升（下降）子序列
 
 复杂度：时间中（维度相乘），空间中（维度相乘）
 
@@ -84,6 +84,7 @@ LuoguP1850 | 换教室 | https://www.luogu.org/problem/P1850
 LuoguP1776 | 宝物筛选 | https://www.luogu.org/problem/P1776
 LuoguP1282 | 多米诺骨牌 | https://www.luogu.org/problem/P1282
 LuoguP4138 | 挂饰 | https://www.luogu.org/problem/P4138
+LuoguP4873 | 牛慢跑 | https://www.luogu.org/problem/P4873
 
 ### 倍增
 
@@ -96,6 +97,17 @@ LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
 LuoguP3979 | 遥远的国度 | https://www.luogu.org/problem/P3979
 LuoguP5024 | 保卫王国 | https://www.luogu.org/problem/P5024
 LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
+
+### 树状数组
+
+左右数个数，区间严格求交个数
+
+复杂度：时间log，空间小
+编号 | 题目 | 链接
+--|--|--
+LuoguP1637 | 三元上升子序列 | https://www.luogu.org/problem/P1637
+LuoguP3660 |  Cow Cross the Road III | https://www.luogu.org/problem/P3660
+
 
 ### 计算几何
 
