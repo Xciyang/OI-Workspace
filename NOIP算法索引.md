@@ -8,6 +8,7 @@
 初始化注意大小和范围
 离线处理 操作倒序
 高精度转模数（慎用）
+树上子树问题差值求解
 
 ### 二分答案
 
@@ -100,13 +101,14 @@ LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
 
 ### 树状数组
 
-左右数个数，区间严格求交个数
+左右数个数，区间严格求交个数，树上树状数组（差值）
 
 复杂度：时间log，空间小
 编号 | 题目 | 链接
 --|--|--
 LuoguP1637 | 三元上升子序列 | https://www.luogu.org/problem/P1637
 LuoguP3660 |  Cow Cross the Road III | https://www.luogu.org/problem/P3660
+LuoguP3605 | 晋升者计数 | https://www.luogu.org/problem/P3605
 
 
 ### 计算几何
