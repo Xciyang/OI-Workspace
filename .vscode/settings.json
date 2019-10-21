@@ -72,7 +72,8 @@
         "iomanip": "cpp",
         "scoped_allocator": "cpp",
         "typeindex": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "rope": "cpp"
     },
     "editor.fontSize": 25,
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
