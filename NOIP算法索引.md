@@ -92,6 +92,7 @@ LuoguP4873 | 牛慢跑 | https://www.luogu.org/problem/P4873
 空间效率折中算法，找k级祖先，存储可加DP，优先枚举层数
 
 复杂度：时间log，空间log
+
 编号 | 题目 | 链接
 --|--|--
 LuoguP1081 | 开车旅行 | https://www.luogu.org/problem/P1081
@@ -104,12 +105,22 @@ LuoguP5557 | 旅行 | https://www.luogu.org/problem/P5557
 左右数个数，区间严格求交个数，树上树状数组（差值）
 
 复杂度：时间log，空间小
+
 编号 | 题目 | 链接
 --|--|--
 LuoguP1637 | 三元上升子序列 | https://www.luogu.org/problem/P1637
 LuoguP3660 |  Cow Cross the Road III | https://www.luogu.org/problem/P3660
 LuoguP3605 | 晋升者计数 | https://www.luogu.org/problem/P3605
 
+### 并查集
+
+关系问题，连接问题
+
+复杂度：时间较小，空间n
+
+编号 | 题目 | 链接
+--|--|--
+LuoguP1783 | 海滩防御 | https://www.luogu.org/problem/P1783
 
 ### 计算几何
 

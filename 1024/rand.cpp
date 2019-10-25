@@ -23,5 +23,6 @@ int main() {
 		tmpm[i]= rand() % 2 ? rand() % 2 + '0' : tmpn[j];
 	}
 	cout << (tmpn + 1) << endl << (tmpm + 1) << endl;
+
 	return 0;
 }

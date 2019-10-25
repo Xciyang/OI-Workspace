@@ -15,7 +15,7 @@ inline int getf(int x) {
 }
 inline int tryf(int x, int y) {
 	if(getf(x) == getf(y)) return 0;
-	f[getf(x)]= getf(y);
+	fa[getf(x)]= getf(y);
 	return 1;
 }
 int main() {
