@@ -114,7 +114,7 @@ LuoguP3605 | 晋升者计数 | https://www.luogu.org/problem/P3605
 
 ### 并查集
 
-关系问题，连接问题
+关系问题，连接问题，最小生成树
 
 复杂度：时间较小，空间n
 
@@ -181,12 +181,13 @@ P3243 | 菜肴制作 | https://www.luogu.org/problem/P3243
 
 ### 最小生成树
 
-prim，kruskal，求图上任意点到某点的最小距离，扩展完全图
+prim，kruskal，求图上任意点到某点的最小距离，扩展完全图，无向边求两点间路径最小值
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP4047 | 部落划分 | https://www.luogu.org/problem/P4047
 一本通1710 | 构造完全图 | http://ybt.ssoier.cn:8088/problem_show.php?pid=1710
+LuoguP2502 | 旅行 | https://www.luogu.org/problem/P2502
 
 ### 区间DP
 
