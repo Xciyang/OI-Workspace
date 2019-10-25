@@ -1,15 +1,6 @@
 # CodeWork
 
-git remote add cw https://github.com/Xciyang/CodeWork.git
+仓库公开，仅仅是OI生涯的一部分代码。
 
-git fetch cw master
+包含很多乱七八糟的文件，然后没了。
 
-git pull cw master
-
-git add .
-
-git status
-
-git commit -m 
-
-git push cw master
