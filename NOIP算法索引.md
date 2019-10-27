@@ -114,13 +114,14 @@ LuoguP3605 | 晋升者计数 | https://www.luogu.org/problem/P3605
 
 ### 并查集
 
-关系问题，连接问题，最小生成树
+关系问题，连接问题，最小生成树，单向链表
 
 复杂度：时间较小，空间n
 
 编号 | 题目 | 链接
 --|--|--
 LuoguP1783 | 海滩防御 | https://www.luogu.org/problem/P1783
+LuoguP2391 | 白雪皑皑 | https://www.luogu.org/problem/P2391
 
 ### 计算几何
 
