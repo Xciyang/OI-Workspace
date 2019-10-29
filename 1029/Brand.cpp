@@ -20,9 +20,9 @@ inline int putR(int l, int r) {
 }
 int a[400005];
 int main() {
-	int n= putR(6, 6);
+	int n= putR(4999, 4999);
 	putchar('\n');
-	for(int i= 1; i <= n; i++) putR(1, 10), putchar(' '), putR(1, 10), putchar('\n');
+	for(int i= 1; i <= n; i++) putR(999999999, 1000000000), putchar(' '), putR(999999999, 1000000000), putchar('\n');
 	putchar('\n');
 	return 0;
 }

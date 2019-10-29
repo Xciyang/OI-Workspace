@@ -12,14 +12,14 @@ inline long long getSum(const NODE &n2) {
 	return n2.x * 2 + n2.y * 2;
 }
 int main() {
-	ifstream ifile("./1.in");
+	ifstream ifile("input");
 	ifile >> n;
 	for(int i= 1; i <= n; i++) ifile >> a[i].x >> a[i].y;
 	ifile.close();
-	ifstream ifile2("./1.out");
+	ifstream ifile2("user_out");
 	for(int i= 1; i <= n; i++) ifile2 >> tryans[i];
 	ifile2.close();
-	ifstream ifile3("./std.out");
+	ifstream ifile3("answer");
 	for(int i= 1; i <= n; i++) ifile3 >> bestans[i];
 	ifile2.close();
 	tmpn.x= tmpn.y= 1;
@@ -40,9 +40,13 @@ int main() {
 		lasta= getSum(tmpn);
 	}
 	if(res == ans) {
-		cout << "ok" << endl;
-		return 0;
+		cerr << "I don't want your program to pass, but ... you are right." << endl;
+		cout << 100 << endl;
 	}
-	cout << "meile" << endl;
-	return 1;
+	else {
+		cerr << "I don't want your program to pass, so you Mailer." << endl;
+		cout << 0 << endl;
+		return 1;
+	}
+	return 0;
 }

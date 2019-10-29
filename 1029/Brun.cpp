@@ -5,11 +5,11 @@
 using namespace std;
 int c;
 int n;
-#define FNAME "1"
+#define FNAME "data/T211"
 #define RND "Brand"
-#define YOU "B"
+#define YOU "Bbl"
 #define STD "Bbl"
-#define OPENSTD 1
+#define OPENSTD 0
 int main() {
 	while(true) {
 		printf("-begin-\n");
@@ -18,15 +18,23 @@ int main() {
 		system(".\\" YOU " < ./" FNAME ".in > ./" FNAME ".out");
 		c= clock() - c;
 		printf("YOU TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
+		if(c > CLOCKS_PER_SEC) {
+			printf("任意键继续。");
+			while(getchar()) break;
+		}
 #if OPENSTD == 1
 		c= clock();
 		system(".\\" STD " < ./" FNAME ".in > ./std.out");
 		c= clock() - c;
 		printf("STD TIME: %lf\n", (double)c / CLOCKS_PER_SEC);
-		if(system("Bcheck")) {
+		if(c > CLOCKS_PER_SEC) {
 			printf("任意键继续。");
 			while(getchar()) break;
 		}
+		// if(system("Bcheck")) {
+		// 	printf("任意键继续。");
+		// 	while(getchar()) break;
+		// }
 #endif
 		printf("-end-\n");
 	}

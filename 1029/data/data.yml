@@ -1,0 +1,21 @@
+subtasks:
+  - score: 15
+    type: min
+    cases: ['01', '02', '03', '04']
+  - score: 15
+    type: min
+    cases: ['05', '06', '07', '08']
+  - score: 30
+    type: min
+    cases: ['09', 10, 11, 12]
+  - score: 20
+    type: min
+    cases: [13, 14, 15, 16]
+  - score: 20
+    type: min
+    cases: [17, 18, 19, 20]
+inputFile: 'T2#.in'
+outputFile: 'T2#.out'
+specialJudge:
+  language: cpp
+  fileName: check.cpp
