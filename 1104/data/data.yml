@@ -1,0 +1,15 @@
+subtasks:
+  - score: 20
+    type: min
+    cases: ['01', '02' ]
+  - score: 20
+    type: min
+    cases: ['03', '04' ]
+  - score: 25
+    type: min
+    cases: ['05', '06' ]
+  - score: 35
+    type: min
+    cases: ['07', '08' ]
+inputFile: 'T1#.in'
+outputFile: 'T1#.out'
