@@ -32,7 +32,7 @@ int main() {
 		cin >> l[i] >> r[i];
 	}
 	dfs(1);
-    dfs2(1);
+	dfs2(1);
 	cout << bestans << endl;
 	return 0;
 }
