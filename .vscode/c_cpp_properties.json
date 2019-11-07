@@ -3,13 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "D:/Ciyang/mingw64/include",
-                "D:/Ciyang/mingw64/x86_64-w64-mingw32/include",
-                "D:/Ciyang/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                "D:/Ciyang/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                "D:/Ciyang/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                "D:/Ciyang/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -17,13 +11,7 @@
                 "_UNICODE"
             ],
             "intelliSenseMode": "gcc-x64",
-            "browse": {
-                "path": [
-                    "${workspaceFolder}"
-                ],
-                "limitSymbolsToIncludedHeaders": true
-            },
-            "compilerPath": "D:/Ciyang/mingw64/bin/g++.exe",
+            "compilerPath": "C:/Users/18492/Documents/mingw64/bin/g++.exe",
             "cppStandard": "c++17"
         }
     ],

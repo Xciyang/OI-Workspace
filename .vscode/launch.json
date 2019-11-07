@@ -78,27 +78,6 @@
                     "ignoreFailures": true
                 }
             ]
-        },
-        {
-            "name": "C++ Luauch -Wall(GDB) ComRoom",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": true,
-            "preLaunchTask": "build-bug-Wall",
-            "MIMode": "gdb",
-            "miDebuggerPath": "D:/Ciyang/mingw64/bin/gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
+        }
     ]
 }
