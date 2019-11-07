@@ -14,7 +14,7 @@ int c[100005], bestans;
 void dfs2(int nown) {
 	if(nown == n + 1) {
 		int res= 0;
-		for(int i= 0; i < n; i++) {
+		for(register int i= 0; i < n; i++) {
 			res+= (c[a[n - i]] << i) - (c[b[n - i]] << i);
 		}
 		bestans= max(bestans, res);
@@ -32,7 +32,7 @@ int main() {
 		cin >> l[i] >> r[i];
 	}
 	dfs(1);
-    dfs2(1);
+	dfs2(1);
 	cout << bestans << endl;
 	return 0;
 }
