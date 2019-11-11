@@ -97,5 +97,6 @@
     "cSpell.language": "en,en-US",
     "cSpell.words": [
         "Zhihu"
-    ]
+    ],
+    "code-runner.runInTerminal": true
 }
