@@ -228,9 +228,12 @@ P1297 | 单选错位 | https://www.luogu.org/problem/P1297
 
 ### 强连通分量
 
+Tarjan，出度入度
+
 编号 | 题目 | 链接
 --|--|--
 P1407 | 稳定婚姻 | https://www.luogu.org/problem/P1407
+P2812 | 校园网络 | https://www.luogu.org/problem/P2812
 
 ### 值得研究
 
