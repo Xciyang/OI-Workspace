@@ -98,5 +98,6 @@
     "cSpell.words": [
         "Zhihu"
     ],
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "editor.fontFamily": "Fira Code"
 }

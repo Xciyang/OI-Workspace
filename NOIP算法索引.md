@@ -210,6 +210,14 @@ LuoguP3004 | 宝箱 | https://www.luogu.org/problem/P3004
 --|--|--
 LuoguP2796 | Facer的程序 | https://www.luogu.org/problem/P2796
 
+### 期望
+
+计算贡献
+
+编号 | 题目 | 链接
+--|--|--
+P1297 | 单选错位 | https://www.luogu.org/problem/P1297
+
 ### 启发式迭代加深
 
 深搜变形，限制答案深度，估价函数
