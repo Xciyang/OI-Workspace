@@ -98,6 +98,5 @@
     "cSpell.words": [
         "Zhihu"
     ],
-    "code-runner.runInTerminal": true,
-    "editor.fontFamily": "Monaco, '问藏书房'"
+    "code-runner.runInTerminal": true
 }
