@@ -1,7 +1,7 @@
 
 namespace CALCULATOR {
 
-enum TOKEN_TYPE { INTEGER = 1, OPERATOR_PLUS, OPERATOR_MINUS, OPERATOR_MUL, OPERATOR_DIV, PAR_LEFT, PAR_RIGHT, T_EOF, T_NULL };
+enum TOKEN_TYPE { INTEGER = 1, OPERPLUS, OPERATOR_MINUS, OPERATOR_MUL, OPERATOR_DIV, PAR_LEFT, PAR_RIGHT, T_EOF, T_NULL };
 class TOKEN {
 	private:
 	TOKEN_TYPE _typ;
@@ -87,7 +87,7 @@ class LEXER {
 			}
 			if(this->_ch == '+') {
 				nextChar();
-				return TOKEN(OPERATOR_PLUS);
+				return TOKEN(OPERPLUS);
 			}
 			if(this->_ch == '-') {
 				nextChar();
@@ -145,7 +145,7 @@ class UNARYOPER : public BASENODE {
 		if(_expr1) delete _expr1;
 	}
 	virtual int getValue() const override {
-		if(this->_token.getType() == OPERATOR_PLUS) return +this->_expr1->getValue();
+		if(this->_token.getType() == OPERPLUS) return +this->_expr1->getValue();
 		if(this->_token.getType() == OPERATOR_MINUS) return -this->_expr1->getValue();
 		return 0;
 	}
@@ -161,7 +161,7 @@ class BINOPER : public BASENODE {
 		if(_expr2) delete _expr2;
 	}
 	virtual int getValue() const override {
-		if(this->_token.getType() == OPERATOR_PLUS) return this->_expr1->getValue() + this->_expr2->getValue();
+		if(this->_token.getType() == OPERPLUS) return this->_expr1->getValue() + this->_expr2->getValue();
 		if(this->_token.getType() == OPERATOR_MINUS) return this->_expr1->getValue() - this->_expr2->getValue();
 		if(this->_token.getType() == OPERATOR_MUL) return this->_expr1->getValue() * this->_expr2->getValue();
 		if(this->_token.getType() == OPERATOR_DIV) return this->_expr1->getValue() / this->_expr2->getValue();
@@ -188,7 +188,7 @@ class PARSER {
 			nextToken(PAR_RIGHT);
 			return res;
 		}
-		if(token.getType() == OPERATOR_PLUS || token.getType() == OPERATOR_MINUS) {
+		if(token.getType() == OPERPLUS || token.getType() == OPERATOR_MINUS) {
 			nextToken(token.getType());
 			return new UNARYOPER(token, parserThird());
 		}
@@ -212,7 +212,7 @@ class PARSER {
 		BASENODE *res = parserSecond();
 		while(this->_tok.getType() != T_EOF) {
 			TOKEN token = this->_tok;
-			if(token.getType() == OPERATOR_PLUS || token.getType() == OPERATOR_MINUS) {
+			if(token.getType() == OPERPLUS || token.getType() == OPERATOR_MINUS) {
 				nextToken(token.getType());
 				res = new BINOPER(token, res, parserSecond());
 			}
