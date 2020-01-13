@@ -9,3 +9,4 @@ SDOI2008 | 校门外的区间 | https://www.luogu.com.cn/problem/P5568 | 线段�
 六省联考2017 | 寿司餐厅 | https://www.luogu.com.cn/problem/P3749 | 
 NOI2015 | 寿司晚宴 | https://www.luogu.com.cn/problem/P2150 |  
 SDOI2015 | 约数个数和 | https://www.luogu.com.cn/problem/P3327 | 莫比乌斯反演、数论分块
+APIO2010 | 特别行动队 | https://www.luogu.com.cn/problem/P3628 | 斜率优化
